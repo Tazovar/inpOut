@@ -1,0 +1,9 @@
+<ng-container *ngIf="cardInfo">
+    <div class="card" style="width: 18rem;">
+        <img [src]="cardInfo.imageUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fs-4">{{cardInfo.name.slice(0,15)}}...</h5>
+          <p class="card-text">აღწერა არ არსებობს</p>
+        </div>
+      </div>
+</ng-container>

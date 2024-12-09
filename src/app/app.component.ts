@@ -4,15 +4,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
-usersArray:Array<any> = [];
-isBtnClicked:boolean = false
-text:string = '';
+export class AppComponent {
 
-  ngOnInit(): void {}
-
-  buttonClickEmitterSubscriber(event:any){
-    this.text = event;
-    this.isBtnClicked = true
-  }
 }
