@@ -4,32 +4,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HeaderComponent } from './shared/header/header.component';
-import { HomeComponent } from './views/pages/home/home.component';
-import { AboutComponent } from './views/pages/about/about.component';
-import { AuthComponent } from './views/pages/auth/auth.component';
-import { LoginComponent } from './views/pages/auth/children/login/login.component';
-import { RegisterComponent } from './views/pages/auth/children/register/register.component';
-import { CaruselComponent } from './views/pages/home/children/carusel/carusel.component';
-import { CardComponent } from './views/pages/about/children/components/card/card.component';
-import { CardDetailsComponent } from './views/pages/about/children/pages/card-details/card-details.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { HomeComponent } from './views/components/home/home.component';
+import { CaruselComponent } from './views/components/home/components/carusel/carusel.component';
+import { MoviesComponent } from './views/components/home/components/movies/movies.component';
+import { MovieComponent } from './views/components/home/components/movies/components/movie/movie.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     HomeComponent,
-    AboutComponent,
-    AuthComponent,
-    LoginComponent,
-    RegisterComponent,
     CaruselComponent,
-    CardComponent,
-    CardDetailsComponent
+    MoviesComponent,
+    MovieComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

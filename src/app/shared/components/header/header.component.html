@@ -1,0 +1,29 @@
+<header>
+    <div class="center-container">
+        <div class="left-container">
+            <div class="left-l-container">
+                <img src="../../../../assets/cavea-logo.svg" alt="">
+            </div>
+            <nav class="left-r-container">
+                <ul>
+                    <li *ngFor="let item of menuArray" routerLink="active-link">{{item.name}}</li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="right-container">
+            <div class="language-container">
+                <p>GEO</p>
+                <div class="language-drop-down-container d-none">
+                    <p>GEO</p>
+                    <p>ENG</p>
+                </div>
+            </div>
+
+            <button class="login-register-btn">შესვლა</button>
+            <button class="login-register-btn">რეგისტრაცია</button>
+
+
+        </div>
+    </div>
+</header>

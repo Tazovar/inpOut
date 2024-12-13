@@ -1,0 +1,13 @@
+
+<ng-container *ngIf="caruselArray.length > 0;else errorText">
+    <div class="carusel">
+        <ng-container *ngFor="let slide of caruselArray">
+        <img [src]="'https://cavea.plus' + slide.mediaUrl" alt="">
+        </ng-container>
+    </div>
+</ng-container>
+
+
+<ng-template #errorText>
+    <p>SLIDER SLIDES ERROR</p>
+</ng-template>

@@ -1,0 +1,9 @@
+ <ng-container *ngIf="moviesArray.length > 0;else error">
+<ng-container *ngFor="let item of moviesArray">
+<app-movie [movies]="item"></app-movie>
+</ng-container>
+</ng-container>
+
+<ng-template #error>
+<h1>MOVIES FETCH ERROR</h1>
+</ng-template>
