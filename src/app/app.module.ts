@@ -13,6 +13,7 @@ import { MoviesComponent } from './views/components/home/components/movies/movie
 import { MovieComponent } from './views/components/home/components/movies/components/movie/movie.component';
 import { StringConverterPipe } from './views/pipes/string-converter.pipe';
 import { ConverToNumberPipe } from './views/pipes/conver-to-number.pipe';
+import { ForgetPasswordComponent } from './views/components/forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ConverToNumberPipe } from './views/pipes/conver-to-number.pipe';
     MovieComponent,
     StringConverterPipe,
     ConverToNumberPipe,
+    ForgetPasswordComponent,
     
   ],
   imports: [
