@@ -8,6 +8,22 @@ import { Subject, takeUntil } from 'rxjs';
   styleUrl: './movies.component.css'
 })
 export class MoviesComponent implements OnInit,OnDestroy {
+  // testObject = {
+  //   name:"asf",
+  //   lastname:"asfasf",
+  //   asf:"asf",
+  //   asfasfasf:"asfasf",
+  //   aasfsf:"asf",
+  //   aadbssfsf:"asfasf",
+  //   asfasf:"asf",
+  //   afs:"asfasf",
+  //   asasff:"asf",
+  //   af:"asfasf",
+  //   nasfaame:"asf",
+  //   lastnasgaame:"asfasf",
+  //   namesasg:"asf",
+  //   lastnasafasme:"asfasf",
+  // }
   moviesArray:Array<any> = [];
   unsubscribeSubject$:Subject<boolean> = new Subject();
   constructor(private homeService:HomeService){}

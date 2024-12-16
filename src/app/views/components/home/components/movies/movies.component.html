@@ -1,4 +1,11 @@
- <ng-container *ngIf="moviesArray.length > 0;else error">
+<!-- <h1 style="text-align: center;color: white;">{{'uppercase' | uppercase}}</h1> -->
+<!-- <h1 style="text-align: center;color: white;">{{'SAFASFASF' | lowercase}}</h1> -->
+<!-- <h1 style="text-align: center;color: white;">{{12 | currency}}</h1> -->
+<!-- <h1 style="text-align: center;color: white;">{{testObject | json}}</h1> -->
+<!-- <h1 style="text-align: center;color: white;">{{'hellos' | stringConverter:5}}</h1> -->
+<!-- <h1 style="text-align: center;color: white;">{{'24' | converToNumber}}</h1> -->
+ 
+<ng-container *ngIf="moviesArray.length > 0;else error">
 <ng-container *ngFor="let item of moviesArray">
 <app-movie [movies]="item"></app-movie>
 </ng-container>

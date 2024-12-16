@@ -11,6 +11,8 @@ import { HomeComponent } from './views/components/home/home.component';
 import { CaruselComponent } from './views/components/home/components/carusel/carusel.component';
 import { MoviesComponent } from './views/components/home/components/movies/movies.component';
 import { MovieComponent } from './views/components/home/components/movies/components/movie/movie.component';
+import { StringConverterPipe } from './views/pipes/string-converter.pipe';
+import { ConverToNumberPipe } from './views/pipes/conver-to-number.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { MovieComponent } from './views/components/home/components/movies/compon
     CaruselComponent,
     MoviesComponent,
     MovieComponent,
+    StringConverterPipe,
+    ConverToNumberPipe,
     
   ],
   imports: [

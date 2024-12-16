@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HomeService } from '../../../../services/home.service';
-import { Subject, takeUntil } from 'rxjs';
+import { Observable, Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-carusel',
@@ -8,27 +8,15 @@ import { Subject, takeUntil } from 'rxjs';
   styleUrl: './carusel.component.css'
 })
 export class CaruselComponent implements OnInit,OnDestroy{
-caruselArray:Array<any> = [];
-unsubscribeSubject$:Subject<boolean> = new Subject()
+data$!:Observable<any>
 constructor(private homeService:HomeService){}
   ngOnInit(): void {
     this.getCaruselData()
   }
 
   private getCaruselData():void {
-this.homeService.getHomeCarusel()
-.pipe(
-  takeUntil(this.unsubscribeSubject$)
-)
-.subscribe((response) => {
-  this.caruselArray = response.slides
-console.log(response);
-
-})
+this.data$ = this.homeService.getHomeCarusel()
   }
 
-  ngOnDestroy(): void {
-    this.unsubscribeSubject$.next(true);
-    this.unsubscribeSubject$.unsubscribe();
-  }
+  ngOnDestroy(): void {}
 }
