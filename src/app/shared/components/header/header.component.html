@@ -6,7 +6,7 @@
             </div>
             <nav class="left-r-container">
                 <ul>
-                    <li *ngFor="let item of menuArray" routerLink="active-link">{{item.name}}</li>
+                    <li *ngFor="let item of menuArray" [routerLink]="item.attr" routerLinkActive="active-link">{{item.name}}</li>
                 </ul>
             </nav>
         </div>

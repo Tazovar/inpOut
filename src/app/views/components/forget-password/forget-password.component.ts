@@ -13,7 +13,6 @@ onFormSubmit(form:NgForm){
 this.authService.sendPasswordResetRequest(form.value)
 .subscribe((res) => {
   console.log(res);
-  
 })
 }
 }
