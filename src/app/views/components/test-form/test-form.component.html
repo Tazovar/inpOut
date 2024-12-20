@@ -1,0 +1,36 @@
+<div class="contaienr">
+    <form #myForm="ngForm" (ngSubmit)="onFormSubmit(myForm)">
+
+
+            <input type="text" name="name" placeholder="name" 
+            required
+            #nameInp="ngModel"
+            maxlength="12"
+            minlength="8"
+            pattern="^(.*\d.*)$"
+            ngModel>
+            <div class="error" *ngIf="nameInp.hasError('required') && nameInp.dirty && nameInp.invalid">გთხოვთ შეავსოთ ველი.</div>
+            <div class="error" *ngIf="nameInp.hasError('minlength') && nameInp.dirty && nameInp.invalid">მინიმალური რაოდენობა არის {{nameInp.getError('minlength').requiredLength}}</div>
+            <div class="error" *ngIf="nameInp.hasError('pattern') && nameInp.dirty && nameInp.invalid">უნდა შეიცავდეს ერთ ციფრს მაინც</div>
+ <input type="text" name="lastname" placeholder="lastname" 
+ required
+ #lastnameInp="ngModel"
+ ngModel>
+
+ <div class="error" *ngIf="lastnameInp.hasError('required') && lastnameInp.dirty && lastnameInp.invalid">გთხოვთ შეავსოთ ველი.</div>
+
+
+ <ng-container ngModelGroup="aditionalInfo">
+<input type="text" name="city" placeholder="city" 
+required
+ngModel>
+<input type="email" name="email" placeholder="email address"
+required
+email
+#emailInp="ngModel"
+ ngModel>
+ <div class="error" *ngIf="emailInp.hasError('email') && emailInp.dirty && emailInp.invalid">email is not valid</div>
+ </ng-container>
+ <button type="submit" [disabled]="myForm.invalid">submit</button>
+    </form>
+</div>

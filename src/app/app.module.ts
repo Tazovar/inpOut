@@ -14,6 +14,7 @@ import { MovieComponent } from './views/components/home/components/movies/compon
 import { StringConverterPipe } from './views/pipes/string-converter.pipe';
 import { ConverToNumberPipe } from './views/pipes/conver-to-number.pipe';
 import { ForgetPasswordComponent } from './views/components/forget-password/forget-password.component';
+import { TestFormComponent } from './views/components/test-form/test-form.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ForgetPasswordComponent } from './views/components/forget-password/forg
     StringConverterPipe,
     ConverToNumberPipe,
     ForgetPasswordComponent,
+    TestFormComponent,
     
   ],
   imports: [
