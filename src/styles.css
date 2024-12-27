@@ -1,5 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
 
-body{
-    background-color: #110324 !important;
+.mat-mdc-dialog-container .mdc-dialog__surface{
+    background-color: white !important;
 }
+.custom-dialog-backdrop-class{
+    background-color: rgba(137, 134, 134, 0.415) !important
+}
+mat-label{
+    color: white !important
+}
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";

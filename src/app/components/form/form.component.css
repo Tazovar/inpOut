@@ -1,0 +1,144 @@
+
+.ng-invalid.ng-dirty:not(form):not([formArray]):not([formGroup]){
+    border: 2px solid #dc3545;
+}
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Header and Button Styling */
+  /* button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  } */
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  /* Input Fields Styling */
+  input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus, input[type="date"]:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  /* Date Container Styling */
+  .dates-container {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+  }
+  
+  .dates-container input {
+    width: calc(50% - 7px); /* Ensures even spacing */
+  }
+  
+  input::placeholder {
+    color: #888;
+  }
+  
+  /* Form Array Containers */
+  ng-container {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  formArrayName {
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  /* Job Section */
+  .job-container {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .job-container input {
+    margin-bottom: 10px;
+  }
+  
+  /* Position Section Styling */
+  .position-container {
+    background-color: #e9ecef;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .position-container input {
+    margin-bottom: 8px;
+  }
+  
+  /* Delete Button (Position & Job) */
+  button.delete-job, button.delete-position {
+    background-color: #dc3545;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  button.delete-job:hover, button.delete-position:hover {
+    background-color: #c82333;
+  }
+  
+  .error{
+    color: red;
+    font-size: 12px;
+    animation: error 0.5s;
+  }
+
+  @keyframes error {
+    from{
+transform: translateY(-10px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .dates-container {
+      flex-direction: column;
+    }
+  
+    .dates-container input {
+      width: 100%;
+    }
+  }
+  

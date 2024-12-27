@@ -1,0 +1,15 @@
+<div class="card-container">
+    <h1 class="card-title">Title: {{card.title}}</h1>
+    <h2 class="card-description">Description: {{card.description}}</h2>
+    <p class="card-dates">Start Date: <span>{{card.startDate}}</span> | End Date: <span>{{card.endDate}}</span></p>
+
+    <div class="positions-container">
+        <ng-container *ngFor="let position of card.positions">
+            <div class="position-card">
+                <h3 class="position-name">Position: {{position.positionName}}</h3>
+                <p class="position-description">Description: {{position.positionDescription}}</p>
+                <p class="position-dates">Start Date: <span>{{position.positionStartDate}}</span> | End Date: <span>{{position.positionEndDate}}</span></p>
+            </div>
+        </ng-container>
+    </div>
+</div>

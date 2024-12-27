@@ -1,0 +1,35 @@
+<form (ngSubmit)="onFormSubmit()" [formGroup]="jobs">
+    <button class="btn btn-success" type="button" (click)="onCreateJobBtnClick()">create job</button>
+    <ng-container formArrayName="jobs">
+        <ng-container *ngFor="let job of formService.getJobs(jobs).controls;let jobIndex = index" [formGroupName]="jobIndex">
+            <div style="border: 1px solid red; padding: 14px; ">
+                <button class="btn btn-danger" type="button" (click)="onDeleteJobBtnClick(jobIndex)">delete job</button>
+                <input type="text" formControlName="title"  placeholder="title">
+                <div *ngIf="job.get('title')?.hasError('required') && job.get('title')?.invalid && job.get('title')?.dirty "  class="error">
+                    გთხოვთ შეავსო ველი.
+                </div>
+                <div *ngIf="job.get('title')?.hasError('minlength') && job.get('title')?.invalid && job.get('title')?.dirty "  class="error">
+                    გთხოვთ შეიყვანოთ მინიმუ <strong class="text-success">{{job.get('title')?.getError('minlength').requiredLength}}</strong>
+                </div>
+                <input type="text" formControlName="description" placeholder="description">
+                <div class="dates-container">
+                    <input type="date" formControlName="startDate" placeholder="startDate">
+                    <input type="date" formControlName="endDate" placeholder="endDate">
+                    <button type="button" (click)="onAddPositionBtnClick(jobIndex)" class="btn btn-primary">add poition</button>
+                </div>
+            </div>
+                <ng-container formArrayName="positions">
+                    <ng-container *ngFor="let position of formService.getPositions(jobs,jobIndex).controls;let positionIndex = index" [formGroupName]="positionIndex">
+                        <div style="border: 1px solid rgb(213, 213, 213); padding: 20px;">
+                            <input type="text" formControlName="positionName" placeholder="positionName">                        
+                            <input type="text" formControlName="positionDescription" placeholder="positionDescription">                        
+                            <input type="date" formControlName="positionStartDate" placeholder="positonStartDate">                        
+                            <input type="date" formControlName="positionEndDate" placeholder="positionEndDate">                        
+                            <button class="btn btn-danger" type="button" (click)="onDeletePositionBtnClick(jobIndex,positionIndex)">delete position</button>
+                        </div>
+                    </ng-container>
+                </ng-container>
+        </ng-container>
+    </ng-container>
+    <button type="submit" class="btn btn-primary mt-2 w-100" [disabled]="jobs.invalid">submit</button>
+</form>
