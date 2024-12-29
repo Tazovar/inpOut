@@ -1,0 +1,9 @@
+<ng-container *ngIf="array.length > 0;else error">
+<ng-container *ngFor="let card of array">
+<app-card [card]="card"></app-card>
+</ng-container>
+</ng-container>
+
+<ng-template #error>
+<p class="text-center">მომხმარებელი არ არის დამატებული</p>
+</ng-template>
