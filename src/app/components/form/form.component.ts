@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -8,9 +8,9 @@ import { NgForm } from '@angular/forms';
 })
 export class FormComponent {
 @Output() formEmitter:EventEmitter<NgForm> = new EventEmitter();
-
   onFormSubmit(form:NgForm){
     this.formEmitter.emit(form);
-    form.reset();
+    
+    
   }
 }

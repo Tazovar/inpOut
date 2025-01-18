@@ -28,8 +28,6 @@ import { TestDirective } from './directives/test.directive';
     FormComponent,
     CardComponent,
     TestDirective,
-    
-    
   ],
   imports: [
     BrowserModule,
