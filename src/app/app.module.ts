@@ -13,10 +13,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { HomeComponent } from './components/home/home.component';
-import { CardsComponent } from './components/cards/cards.component';
-import { FormComponent } from './components/form/form.component';
-import { CardComponent } from './components/card/card.component';
-import { TestDirective } from './directives/test.directive';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 
@@ -24,10 +23,9 @@ import { TestDirective } from './directives/test.directive';
   declarations: [
     AppComponent,
     HomeComponent,
-    CardsComponent,
-    FormComponent,
-    CardComponent,
-    TestDirective,
+    AboutComponent,
+    ContactComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

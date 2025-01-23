@@ -1,8 +1,0 @@
-<div style="border: 1px solid black;padding: 10px;">
-<p>{{card.name}}</p>
-<p>{{card.lastname}}</p>
-<div class="box" [ngClass]="{active:card.status == 'active','noactive':card.status == 'noactive'}"></div>
- <button (click)="onChangeStatusBtnClick(card.id)">change status</button>
- <button (click)="onDeleteBtnClick(card.id)">delete</button>
-<p [isAdultD]="card.age">{{card.age}}</p>
-</div>
