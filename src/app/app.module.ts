@@ -16,6 +16,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HeaderComponent } from './components/header/header.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { C404Component } from './components/c404/c404.component';
 
 
 
@@ -26,6 +28,8 @@ import { HeaderComponent } from './components/header/header.component';
     AboutComponent,
     ContactComponent,
     HeaderComponent,
+    UserDetailsComponent,
+    C404Component,
   ],
   imports: [
     BrowserModule,
