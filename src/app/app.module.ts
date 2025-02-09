@@ -12,24 +12,25 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
+import { MainComponent } from './components/main/main.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { UserDetailsComponent } from './components/user-details/user-details.component';
-import { C404Component } from './components/c404/c404.component';
-
+import { AuthComponent } from './components/auth/auth.component';
+import { RegisterComponent } from './components/auth/components/register/register.component';
+import { LoginComponent } from './components/auth/components/login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent,
+    MainComponent,
     ContactComponent,
+    FooterComponent,
     HeaderComponent,
-    UserDetailsComponent,
-    C404Component,
+    AuthComponent,
+    RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
