@@ -1,17 +1,9 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommonService {
-public isRouteBlocked:boolean = false;
-
-
-
-
-public blockOrUnBlockRoute(){
-  this.isRouteBlocked = !this.isRouteBlocked;
-}
-  
+@Output() updateDataEmitter:EventEmitter<any> = new EventEmitter()
   constructor() { }
 }

@@ -1,0 +1,8 @@
+
+<p routerLink="contact">go contact</p>
+<app-add-new-card-form></app-add-new-card-form>
+<div class="main-container">
+    <ng-container *ngFor="let item of getArray()">
+    <app-card [card]="item"></app-card>
+    </ng-container>
+</div>

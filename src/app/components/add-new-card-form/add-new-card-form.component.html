@@ -1,0 +1,40 @@
+<div class="form-container">
+    <h2>Product Form</h2>
+  
+    <form (ngSubmit)="onSubmit(productForm)" #productForm="ngForm">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input id="title" name="title" ngModel required />
+      </div>
+  
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input id="price" name="price" ngModel type="number" required min="0" />
+        
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" ngModel required></textarea>
+        
+      </div>
+  
+      <div class="form-group">
+        <label for="image">Image URL</label>
+        <input id="image" name="image" ngModel type="url" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category" ngModel required>
+          <option value="electronics">electronics</option>
+          <option value="jewelery">jewelery</option>
+          <option value="men's clothing">men's clothing</option>
+          <option value="women's clothing">women's clothing</option>
+        </select>
+      </div>
+  
+      <button type="submit" [disabled]="productForm.invalid">{{!isUpdateResponse ? 'submit' : 'update'}}</button>
+    </form>
+  </div>
+  

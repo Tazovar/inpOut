@@ -12,25 +12,18 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import { MainComponent } from './components/main/main.component';
+import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-import { AuthComponent } from './components/auth/auth.component';
-import { RegisterComponent } from './components/auth/components/register/register.component';
-import { LoginComponent } from './components/auth/components/login/login.component';
-
+import { CardComponent } from './components/card/card.component';
+import { AddNewCardFormComponent } from './components/add-new-card-form/add-new-card-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
+    HomeComponent,
     ContactComponent,
-    FooterComponent,
-    HeaderComponent,
-    AuthComponent,
-    RegisterComponent,
-    LoginComponent,
+    CardComponent,
+    AddNewCardFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +36,8 @@ import { LoginComponent } from './components/auth/components/login/login.compone
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    HttpClientModule
   ],
   providers: [
     provideAnimationsAsync()
