@@ -12,18 +12,26 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import { HomeComponent } from './components/home/home.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { CardComponent } from './components/card/card.component';
-import { AddNewCardFormComponent } from './components/add-new-card-form/add-new-card-form.component';
+import { HomeComponent } from './pages/components/home/home.component';
+import { BasketComponent } from './pages/components/basket/basket.component';
+import { OneBasketItemComponent } from './pages/components/basket/components/one-basket-item/one-basket-item.component';
+import { TotalPriceComponent } from './pages/components/basket/components/total-price/total-price.component';
+import { ProductComponent } from './pages/components/home/components/product/product.component';
+import { ProductFilterComponent } from './pages/components/home/components/product-filter/product-filter.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactComponent,
-    CardComponent,
-    AddNewCardFormComponent,
+    BasketComponent,
+    OneBasketItemComponent,
+    TotalPriceComponent,
+    ProductComponent,
+    ProductFilterComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
