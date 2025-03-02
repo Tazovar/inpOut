@@ -1,1 +1,14 @@
-<p>basket works!</p>
+
+
+
+    <ng-container *ngFor="let product of basketsArray">
+        <tr>
+            <app-one-basket-item 
+            [disabledBtn]="disabledBtn"
+            (deleteOneBasketItemEmitter)="deleteOneBasketItemEmitterSub($event)"
+             (updateOneBasketItemEmitter)="updateOneBasketItemEmitterSub($event)" [oneBasketItem]="product"></app-one-basket-item>
+        </tr>
+    </ng-container>
+    
+
+    <app-total-price [totalPrice]="totalPrice"></app-total-price>

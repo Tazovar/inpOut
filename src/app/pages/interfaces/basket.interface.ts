@@ -3,7 +3,7 @@ import { ProductRes } from "./product.interface";
 export interface BasketRes{
     quantity:number,
     price:number
-    product:ProductRes[];
+    product:ProductRes;
 }
 
 export interface addUpdateBasketData{

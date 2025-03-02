@@ -10,8 +10,8 @@ import { addUpdateBasketData, BasketRes } from '../interfaces/basket.interface';
 export class BasketService {
     constructor(private commonService:CommonService,private http:HttpClient) { }
 
-    public GetAllProducts():Observable<BasketRes>{
-      return this.http.get<BasketRes>(`${this.commonService.getBaseUrl()}/api/Baskets/GetAll`)
+    public GetAllProducts():Observable<BasketRes[]>{
+      return this.http.get<BasketRes[]>(`${this.commonService.getBaseUrl()}/api/Baskets/GetAll`)
     }
 
     public updateBasket(updateData:addUpdateBasketData){
