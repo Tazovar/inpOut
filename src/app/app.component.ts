@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-root',
@@ -6,4 +7,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent{
+
+  onFormSubmit(form:NgForm){
+    console.log(form);
+    
+  }
 }

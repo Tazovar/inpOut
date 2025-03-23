@@ -9,3 +9,10 @@ mat-label{
     color: white !important
 }
 /* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+
+
+
+.ng-invalid.ng-dirty:not(form):not([ngModelGroup]){
+    border:1px solid red ;
+    outline: none;
+}

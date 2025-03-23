@@ -1,4 +1,26 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<div class="center-container">
+    <form #myForm="ngForm" (ngSubmit)="onFormSubmit(myForm)">
+        <input name="name"
+        required
+        minlength="5"
+        maxlength="10"
+        pattern="^(?=.*[A-Z])(?=.*\d).+$" 
+        #myName="ngModel"
+        ngModel type="text" placeholder="username">
+        <p class="error" *ngIf="myName.invalid && myName.dirty && myName.hasError('required')">ველის შევსება არის საჭირო</p>
+        <p class="error" *ngIf="myName.invalid && myName.dirty && myName.hasError('pattern')">უნდა ჩაწეროთ მინიმუმ 1 დიდი ასო</p>
+        <p class="error" *ngIf="myName.invalid && myName.dirty && myName.hasError('pattern')">უნდა შეიცავდეს 1 რიცხვს</p>
+        <p class="error" *ngIf="myName.invalid && myName.dirty && myName.hasError('minlength')">აუცილებელია მინიმუმ <strong>{{myName.getError('minlength').requiredLength}}</strong> სიმბოლოს დაწერა
+        <br>თქვენ გიწერიათ <strong>{{myName.getError('minlength').actualLength}} </strong> სიმბოლო
+        </p>
+        <input
+        required
+        #myPassword="ngModel"
+        name="password" 
+        ngModel type="text" placeholder="password">
+        <p class="error" *ngIf="myPassword.invalid && myPassword.dirty && myPassword.hasError('required')">ველის შევსება არის საჭირო</p>
 
-<app-footer></app-footer>
+        <button type="submit">submit</button>
+    </form>
+
+</div>
