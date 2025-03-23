@@ -19,8 +19,7 @@
         name="password" 
         ngModel type="text" placeholder="password">
         <p class="error" *ngIf="myPassword.invalid && myPassword.dirty && myPassword.hasError('required')">ველის შევსება არის საჭირო</p>
-
-        <button type="submit">submit</button>
+        <button type="submit" [disabled]="myForm.invalid">submit</button>
     </form>
 
 </div>
